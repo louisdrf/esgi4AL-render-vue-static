@@ -1,0 +1,10 @@
+# This is a basic example Blueprint for a Django web service and
+# the PostgreSQL database it connects to.
+services:
+  - type: web # A Python web service named django-app running on a free instance
+    plan: free
+    name: vue-app
+    runtime: node
+    repo: https://github.com/louisdrf/esgi4AL-render-vue-static.git
+    buildCommand: "npm i && npm run build"
+    startCommand: "npm run dev"
